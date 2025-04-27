@@ -1,0 +1,23 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+
+# Ignore virtual environments (venvs inside services)
+fastapi_services/auth_service/venv/
+fastapi_services/payroll_service/venv/
+fastapi_services/attendance_service/venv/
+fastapi_services/config_service/venv/
+
+# Ignore root level venv if any
+venv/
+
+# Ignore environment files
+.env
+*/.env
+
+# Ignore IDE/editor folders
+.vscode/
+.idea/
+
+# Ignore log files
+*.log

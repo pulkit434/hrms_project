@@ -3,7 +3,7 @@ from celery import Celery
 # Create Celery instance
 celery_app = Celery(
     "payroll_service",  # Name of the service
-    broker="redis://localhost:6379/0",  # Redis broker URL (adjust based on your configuration)
+    broker="redis://localhost:6379/0",  # Redis broker URL
     backend="redis://localhost:6379/0",  # Redis backend URL for result storage
 )
 

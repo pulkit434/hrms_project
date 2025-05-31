@@ -31,7 +31,7 @@ class UserResponse(UserBase):
     id: int
 
     class Config:
-        orm_mode = True  # This is required to work with SQLAlchemy models
+        from_attributes = True  # This is required to work with SQLAlchemy models
 
 # ✅ Used when updating user info (no password here)
 class UserUpdate(UserBase):

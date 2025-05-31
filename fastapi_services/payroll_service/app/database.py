@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker, DeclarativeBase
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    DATABASE_URL: str = "postgresql://ashim.sharma@localhost:5432/hrms_db"
+    DATABASE_URL: str = "postgresql://ashim.sharma@localhost:5432/hrms_payroll_db"
 settings = Settings()
 
 engine = create_engine(settings.DATABASE_URL)

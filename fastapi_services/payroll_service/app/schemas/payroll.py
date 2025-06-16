@@ -7,8 +7,8 @@ from typing import Optional
 
 class SalaryCalculationRequest(BaseModel):
     employee_id: int
-    name: str
-    role: str
+    #name: str
+    #role: str
     basic_salary: float
     hra: float
     da: float

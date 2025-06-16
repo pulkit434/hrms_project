@@ -1,23 +1,22 @@
 #!/usr/bin/env python
+"""Django's command-line utility for administrative tasks."""
 import os
 import sys
 
+
 def main():
-    print("Starting manage.py...")  # debug print
+    """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'employee_service.settings')
-    print("DJANGO_SETTINGS_MODULE set")  # debug print
-
     try:
-        import django
-        print("Django imported successfully")  # debug print
         from django.core.management import execute_from_command_line
-        print("execute_from_command_line imported")  # debug print
     except ImportError as exc:
-        print("ImportError:", exc)
-        raise
-
-    print("Running command:", sys.argv)
+        raise ImportError(
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment?"
+        ) from exc
     execute_from_command_line(sys.argv)
+
 
 if __name__ == '__main__':
     main()
